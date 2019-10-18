@@ -1,0 +1,6 @@
+[submodule "cocoapi"]
+	path = cocoapi
+	url = https://github.com/NikolaySt/cocoapi.git
+[submodule "densepose"]
+	path = densepose
+	url = https://github.com/NikolaySt/DensePose.git
