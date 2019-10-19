@@ -2,7 +2,7 @@
 ## Configure, build and run in several simple steps.
 
 The original Densepose code can be find here https://github.com/facebookresearch/DensePose.
-I had to make a lot of small changes to make it work under windows. Most of my changes are pretty small but without them it wasn't not possible to run it. I had to fork the original repository in https://github.com/NikolaySt/DensePose along with https://github.com/NikolaySt/cocoapi .
+I had to make a lot of small changes to make it work under windows. Most of my changes are pretty small but without them it was not possible to run it. I forked the original repository in https://github.com/NikolaySt/DensePose along with https://github.com/NikolaySt/cocoapi .
 
 ## Installation under Windows
 
