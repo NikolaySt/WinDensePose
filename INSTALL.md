@@ -30,24 +30,24 @@ The installation has to include Python language support, MSVC v142 - VS 2019 C++
 #### Build and install cocoapi and detectron
  - From windows go to WinPy64 folder start ``WinPython Command Prompt.exe``
  - Then in the console follow these steps:
-   1. got to directory ``cocoapi\PythonAPI`` and run the following command:
+   1. go to folder ``cocoapi\PythonAPI`` and run the following command:
       - python setup.py build
       - python setup.py install
-   2. got to directory ``densepose`` and run the following command:
+   2. go to folder ``densepose`` and run the following command:
       - python setup.py build
       - python setup.py install      
 
 ### Step eight
 #### Inference with Pretrained Models.
-If all of the previous steps succeed then we can test whether everything is working. 
+If all of the previous steps succeed then we can test whether everything is working properly. 
 
 #### Option one:
   1. Open Densepose.sln with  Visual Studio then run the project: 
 
 #### Option two:
-   1. From windows go to WinPy64 folder start ``WinPython Command Prompt.exe``
+   1. From windows explorer go to WinPy64 folder start ``WinPython Command Prompt.exe``
    2. Go the main folder and run setpath.bat this will set up the following python path: ``set PYTHONPATH=%cd%\densepose;%PYTHONPATH%``
-   3. Go to the ``densepose`` folder and run the command: 
+   3. Go to ``densepose`` folder and run one of these commands: 
 ```
 python tools/infer_simple.py --cfg configs/DensePose_ResNet101_FPN_s1x-e2e.yaml --output-dir DensePoseData/infer_out/ --image-ext jpg --wts https://dl.fbaipublicfiles.com/densepose/DensePose_ResNet101_FPN_s1x-e2e.pkl DensePoseData/demo_data/demo_im.jpg
 ```
@@ -56,7 +56,7 @@ or
 python tools/infer_simple.py --cfg configs/DensePose_ResNet50_FPN_s1x-e2e.yaml --output-dir DensePoseData/infer_out/ --image-ext jpg --wts https://dl.fbaipublicfiles.com/densepose/DensePose_ResNet50_FPN_s1x-e2e.pkl DensePoseData/demo_data/demo_im.jpg
 ```
 
-- The output in the console will be
+- The output in the console will contain many lines but these will confirm that everything is working:
              
       INFO infer_simple.py: 111: Inference time: 2.606s
       INFO infer_simple.py: 114:  | im_detect_bbox: 2.154s
@@ -67,7 +67,7 @@ python tools/infer_simple.py --cfg configs/DensePose_ResNet50_FPN_s1x-e2e.yaml -
 
 ## For more additional details you can read densepose and detectron documentations
 
-### Additional
+### In addition
 There are there scripts you can run to download some files:
 densepose\DensePoseData
 get_DensePose_COCO.sh
@@ -75,4 +75,4 @@ get_densepose_uv.sh
 get_eval_data.sh
 To run .sh scripts Install cygwin => https://cygwin.com/setup-x86_64.exe
 
-In Step three we download some files by hand.
+In Step three we download some files by hand from get_densepose_uv.sh
